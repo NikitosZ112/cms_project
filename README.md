@@ -5,7 +5,7 @@ Backend CMS на Django для страниц с видео- и аудиокон
 
 ## Установка и запуск
 
-````bash
+```bash
 git clone https://github.com/NikitosZ112/cms_project.git
 cd cms_project
 python -m venv venv
@@ -15,14 +15,15 @@ python manage.py migrate
 python manage.py createsuperuser
 python manage.py runserver```
 
-Redis и Celery для фоновых задач (Windows)
+## Redis и Celery для фоновых задач (Windows)
+
 ```bash
 redis-server
 celery -A cms_project worker --loglevel=info -P threads```
 
-Основной функционал
+## Основной функционал
+
 Страницы с произвольным количеством видео/аудио
 REST API: /api/pages/ (список), /api/pages/<id>/ (детали)
 Счетчики просмотров обновляются асинхронно
 Админка с поиском и inline-редактированием
-````
